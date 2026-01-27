@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dynamic Color Changer</title>
 
-    <!-- Internal CSS -->
-    <style>
-        h3 { color: green; }
-    </style>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Fixed Navbar -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="feedback.html">Feedback</a>
-    </div>
+    <h2>Dynamic Color Changer</h2>
 
-    <div class="content">
+    <!-- Color Changing Div -->
+    <div id="colorBox"></div>
 
-        <!-- Absolute element -->
-        <div class="important">Important</div>
+    <!-- Color Input -->
+    <input type="color" id="colorPicker">
 
-        <h1 id="main-title">Welcome to My First Webpage</h1>
+    <br><br>
 
-        <p class="box">
-            Hello! My name is <span style="color: blue;">Himanshu</span>.
-        </p>
+    <!-- Reset Button -->
+    <button id="resetBtn">Reset Color</button>
 
-        
-        <p style="color: purple;">This is inline CSS.</p>
-
-        <!-- Sticky heading -->
-        <h3 class="sticky">My Hobbies</h3>
-
-        <p>Reading</p>
-        <p>Trading</p>
-        <p>Learning Technology</p>
-        <!-- Box model -->
-        <div class="model">
-            This is a box model div.
-        </div>
-
-    </div>
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
