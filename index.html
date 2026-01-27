@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h3 { color: green; }
+    </style>
 </head>
 <body>
 
-    <h1>Welcome to My First Webpage</h1>
+    <!-- Fixed Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="feedback.html">Feedback</a>
+    </div>
 
-    <p>
-        Hello! My name is <strong>Himanshu</strong>. I am learning <em>HTML</em> and enjoy
-        building simple webpages. This page is part of my <u>HTML assignment</u>.
-    </p>
+    <div class="content">
 
-    <h3>My Hobbies</h3>
-    <ol>
-        <li>Reading</li>
-        <li>Trading & Investing</li>
-        <li>Learning New Technologies</li>
-    </ol>
+        <!-- Absolute element -->
+        <div class="important">Important</div>
 
-    <h3>My Favorite Foods</h3>
-    <ul>
-        <li>Momo</li>
-        <li>Pizza</li>
-        <li>Dal Bhat</li>
-    </ul>
+        <h1 id="main-title">Welcome to My First Webpage</h1>
 
-    <p>
-        <a href="about.html">Go to About Page</a>
-    </p>
+        <p class="box">
+            Hello! My name is <span style="color: blue;">Himanshu</span>.
+        </p>
+
+        
+        <p style="color: purple;">This is inline CSS.</p>
+
+        <!-- Sticky heading -->
+        <h3 class="sticky">My Hobbies</h3>
+
+        <p>Reading</p>
+        <p>Trading</p>
+        <p>Learning Technology</p>
+        <!-- Box model -->
+        <div class="model">
+            This is a box model div.
+        </div>
+
+    </div>
 
 </body>
 </html>

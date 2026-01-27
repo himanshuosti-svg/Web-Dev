@@ -1,13 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-    <link rel="stylesheet" href
+/* FIX BODY SPACE FOR BOOTSTRAP NAVBAR */
+body {
+    padding-top: 70px;
+}
 
-</head>
-<body>
-    
-</body>
-</html>
+/* FLEXBOX GALLERY */
+.photos-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.photos-flex img {
+    width: 100%;
+    flex: 1 1 25%;
+}
+
+/* GRID GALLERY */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .photos-flex img {
+        flex: 1 1 100%;
+    }
+
+    .photos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .photos-flex img {
+        flex: 1 1 50%;
+    }
+
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
