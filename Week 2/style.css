@@ -1,0 +1,72 @@
+/* A. External CSS */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px;
+}
+
+h1, h2 {
+    color: darkblue;
+}
+
+/* B. Element selector */
+p {
+    font-size: 16px;
+}
+
+/* Class selector */
+.box {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+/* ID selector */
+#main-title {
+    color: darkred;
+}
+
+/* D. Box model */
+.model {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 15px;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+/* Positioning */
+.content {
+    position: relative;
+    padding: 20px;
+}
+
+.important {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: yellow;
+    padding: 5px;
+}
+
+/* Sticky heading */
+.sticky {
+    position: sticky;
+    top: 70px;
+    background-color: lightgray;
+}
