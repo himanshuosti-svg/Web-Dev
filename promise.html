@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Payment Simulation</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h2>Payment Simulation</h2>
+<button id="payBtn">Pay Now</button>
+<p id="status"></p>
+
+<script>
+    const payBtn = document.getElementById("payBtn");
+    const status = document.getElementById("status");
+
+    payBtn.addEventListener("click", function () {
+
+        status.textContent = "Processing payment...";
+
+        const paymentPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Payment Successful!");
+            }, 2000);
+        }); paymentPromise.then(message => {
+            status.textContent = message;
+            payBtn.disabled = true;
+        });
+
+    });
+    </script>
+
+</body>
+</html>
