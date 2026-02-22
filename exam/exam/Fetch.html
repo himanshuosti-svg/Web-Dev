@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch Album</title>
+
+<style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+    }
+ ul {
+        background:fixed
+        padding: 15px;
+        width: 350px;
+        border-radius: 8px;
+        list-style: none;
+    }
+
+    li {
+        padding: 6px;
+        border-bottom: 1px
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }</style>
+</head>
+
+<body>
+
+<h2>Albums</h2>
+<p id="loading">Loading albums...</p>
+<ul id="albumlist"></ul>
+
+<script>
+    const albumlist = document.getElementById("albumlist");
+    const loadingText = document.getElementById("loading");
+     fetch("https://jsonplaceholder.typicode.com/albums")
+        .then(response => response.json())
+        .then(data => {
+            loadingText.style.display = "none";
+
+            data.slice(0, 15).forEach(album => {
+                const li = document.createElement("li");
+                li.textContent = album.title;
+                albumlist.appendChild(li);
+            });
+        })
+         .catch(error => {
+            loadingText.textContent = "failed to load albums";
+        });
+    </Script>
+</body>
+</html>
+
+
